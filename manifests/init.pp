@@ -106,8 +106,8 @@ class sudo(
     ensure  => $dir_ensure,
     owner   => 'root',
     group   => $sudo::params::config_file_group,
-    mode    => '0550',
-    recurse => $purge,
+    mode    => '0440',
+    recurse => true,
     purge   => $purge,
     require => Package[$package],
   }
